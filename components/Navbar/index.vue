@@ -9,9 +9,9 @@
 
       <!-- Desktop Links (hidden on mobile) -->
       <div class="hidden md:flex space-x-20 px-15">
-        <NuxtLink to="/" class="text-gray-300 hover:text-black hover:underline text-xl">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-gray-300 hover:text-black hover:underline text-xl">About</NuxtLink>
-        <NuxtLink to="/contact" class="text-gray-300 hover:text-black hover:underline text-xl">Contact Us</NuxtLink>
+        <NuxtLink to="/" class="text-gray-300 hover:text-white hover:underline text-xl">Home</NuxtLink>
+        <NuxtLink to="/about" class="text-gray-300 hover:text-white hover:underline text-xl">About</NuxtLink>
+        <NuxtLink to="/contact" class="text-gray-300 hover:text-white hover:underline text-xl">Contact Us</NuxtLink>
       </div>
 
       <!-- Mobile Menu Button (hamburger) -->
