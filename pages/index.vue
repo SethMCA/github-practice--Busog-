@@ -1,5 +1,5 @@
 <template>
-  <div>hello world jawa</div>
+  <div>hello world jawa this is about me</div>
 </template>
 
 <script lang="ts" setup></script>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-800 p-4">
+  <nav class="bg-black p-2">
     <div class="container mx-auto flex justify-between items-center px-10">
       <!-- Logo with PNG Icon -->
       <NuxtLink to="/" class="text-white text-xl font-bold flex items-center gap-4">
@@ -9,9 +9,9 @@
 
       <!-- Links wrapped in a single div with padding -->
       <div class="space-x-20 px-10 ">
-        <NuxtLink to="/" class="text-gray-300 hover:underline text-xl">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-gray-300 hover:underline text-xl">About</NuxtLink>
-        <NuxtLink to="/contact" class="text-gray-300 hover:underline text-xl">Contact us</NuxtLink>
+        <NuxtLink to="/" class="text-gray-300 hover:text-white text-xl transition-all duration-300 border-b-2 border-transparent hover:border-white">Home</NuxtLink>
+        <NuxtLink to="/about" class="text-gray-300 hover:text-white text-xl transition-all duration-300 border-b-2 border-transparent hover:border-white">About</NuxtLink>
+        <NuxtLink to="/contact" class="text-gray-300 hover:text-white text-xl transition-all duration-300 border-b-2 border-transparent hover:border-white">Contact us</NuxtLink>
       </div>
     </div>
   </nav>
