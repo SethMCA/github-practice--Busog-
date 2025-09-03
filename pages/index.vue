@@ -1,8 +1,9 @@
+<!-- pages/index.vue -->
 <template>
+  <!-- Hero -->
   <section class="relative">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div class="grid items-center gap-12 lg:grid-cols-2">
-        <!-- Left: copy -->
         <div>
           <h1
             class="mt-6 text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl"
@@ -18,8 +19,9 @@
           </p>
 
           <div class="mt-8 flex items-center gap-3">
+            <!-- anchor to contact section -->
             <NuxtLink
-              to="#"
+              to="#contact"
               class="inline-flex items-center rounded-md bg-neutral-900 px-4 py-2.5 text-white shadow-sm hover:bg-neutral-800"
             >
               Contact us, we don't bite
@@ -27,7 +29,6 @@
           </div>
         </div>
 
-        <!-- Right: artwork / logo -->
         <div class="relative">
           <div
             class="aspect-[4/3] w-full rounded-2xl border border-neutral-200 bg-neutral-50 flex items-center justify-center overflow-hidden"
@@ -43,6 +44,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Contact component -->
+  <Contact />
 </template>
 
 <script setup lang="ts"></script>

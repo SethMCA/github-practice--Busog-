@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-gray-800 text-white p-4 mt-auto text-center">
-    <p class="white">© 2025 My Website</p>
+    <p class="white">© 2025 Busog si seth almazan</p>
     <nav class="mt-2 flex justify-center space-x-6 text-gray-500">
       <a
         href="https://twitter.com"
