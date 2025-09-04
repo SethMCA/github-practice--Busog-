@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <slot />
+  <div class="min-h-screen">
+    <Navbar />
+    <main class="pt-16">
+      <slot />
+    </main>
+    <FooterMain />
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>
