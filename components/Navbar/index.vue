@@ -27,12 +27,44 @@
           class="text-gray-300 hover:text-white transition-colors"
           >About Us</NuxtLink
         >
-        <!-- If your contact is on the home page -->
+
         <NuxtLink
           to="/#contact"
           class="text-gray-300 hover:text-white transition-colors"
           >Contact Us</NuxtLink
         >
+
+        <button
+          @click="toggleDark"
+          :aria-pressed="scopedDark"
+          role="switch"
+          class="rounded-md p-2 text-gray-300 hover:text-white transition-colors cursor-pointer dark:text-gray-200 dark:hover:bg-white/10"
+          title="Toggle dark mode"
+        >
+          <svg
+            v-if="!scopedDark"
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+          </svg>
+
+          <svg
+            v-else
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <circle cx="12" cy="12" r="4" stroke-width="2" />
+            <path
+              stroke-width="2"
+              d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364l-1.414-1.414M6.05 6.05 4.636 4.636m12.728 0L15.95 6.05M6.05 17.95l-1.414 1.414"
+            />
+          </svg>
+          <span class="sr-only">Toggle dark mode</span>
+        </button>
       </div>
 
       <!-- Mobile toggle -->
@@ -106,6 +138,11 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useScopedDark } from "~/composables/useDarkSections";
+
 const isMenuOpen = ref(false);
 const close = () => (isMenuOpen.value = false);
+
+const scopedDark = useScopedDark();
+const toggleDark = () => (scopedDark.value = !scopedDark.value);
 </script>

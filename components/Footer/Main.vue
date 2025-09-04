@@ -1,5 +1,7 @@
 <template>
-  <footer class="bg-gray-800 text-white p-4 mt-auto text-center">
+  <footer
+    class="bg-gray-800 text-white p-4 mt-auto text-center border-white/10 border-t"
+  >
     <p class="white">© 2025 Busog si seth almazan</p>
     <nav class="mt-2 flex justify-center space-x-6 text-gray-500">
       <a
