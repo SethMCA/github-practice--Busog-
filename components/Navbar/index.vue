@@ -27,7 +27,6 @@
           class="text-gray-300 hover:text-white transition-colors"
           >About Us</NuxtLink
         >
-
         <NuxtLink
           to="/#contact"
           class="text-gray-300 hover:text-white transition-colors"
@@ -41,6 +40,7 @@
           class="rounded-md p-2 text-gray-300 hover:text-white transition-colors cursor-pointer dark:text-gray-200 dark:hover:bg-white/10"
           title="Toggle dark mode"
         >
+          <!-- Moon when OFF -->
           <svg
             v-if="!scopedDark"
             class="h-6 w-6"
@@ -67,43 +67,77 @@
         </button>
       </div>
 
-      <!-- Mobile toggle -->
-      <button
-        @click="isMenuOpen = !isMenuOpen"
-        :aria-expanded="isMenuOpen"
-        aria-controls="mobile-menu"
-        aria-label="Toggle menu"
-        class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 focus:outline-none"
-      >
-        <svg
-          v-if="!isMenuOpen"
-          class="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <div class="md:hidden flex items-center gap-2">
+        <button
+          @click="toggleDark"
+          :aria-pressed="scopedDark"
+          role="switch"
+          class="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10"
+          title="Toggle dark mode"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-        <svg
-          v-else
-          class="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+          <svg
+            v-if="!scopedDark"
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+          </svg>
+
+          <svg
+            v-else
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <circle cx="12" cy="12" r="4" stroke-width="2" />
+            <path
+              stroke-width="2"
+              d="M12 2v2m0 16v2M22 12h-2M4 12H2m15.364 6.364l-1.414-1.414M6.05 6.05 4.636 4.636m12.728 0L15.95 6.05M6.05 17.95l-1.414 1.414"
+            />
+          </svg>
+          <span class="sr-only">Toggle dark mode</span>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button
+          @click="isMenuOpen = !isMenuOpen"
+          :aria-expanded="isMenuOpen"
+          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
+          class="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 focus:outline-none"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+          <svg
+            v-if="!isMenuOpen"
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            v-else
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile menu -->

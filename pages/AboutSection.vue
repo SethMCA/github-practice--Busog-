@@ -182,9 +182,7 @@
         </div>
       </div>
 
-      <p class="mt-12 text-sm text-gray-500 dark:text-slate-400">
-        © 2025 My Website
-      </p>
+      <p class="mt-12 text-sm text-gray-500 dark:text-slate-400"></p>
     </section>
   </div>
 </template>
